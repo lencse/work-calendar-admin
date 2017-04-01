@@ -1,3 +1,4 @@
-app:
-    resource: "@AppBundle/Controller/"
+lencse_work_calendar_admin:
+    resource: "@LencseWorkCalendarAdminBundle/Controller/"
     type:     annotation
+    prefix:   /
