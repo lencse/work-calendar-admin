@@ -18,7 +18,11 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('lencse_work_calendar_admin');
+
+        $treeBuilder->root('lencse_work_calendar_admin');
+
+        // Use the following if additional config needed:
+        //$rootNode = $treeBuilder->root('lencse_work_calendar_admin');
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for

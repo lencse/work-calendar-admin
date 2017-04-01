@@ -33,14 +33,18 @@
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0",
-        "phpunit/phpunit": "^6.0"
+        "phpunit/phpunit": "^6.0",
+        "phpmd/phpmd": "^2.6",
+        "squizlabs/php_codesniffer": "^2.8"
     },
     "scripts": {
         "test": [
             "vendor/bin/phpunit --configuration ./phpunit.xml.dist --no-coverage"
         ],
         "test-all": [
-            "vendor/bin/phpunit --configuration ./phpunit.xml.dist --no-coverage"
+            "vendor/bin/phpunit --configuration ./phpunit.xml.dist --no-coverage",
+            "vendor/bin/phpmd src/ text phpmd.xml",
+            "vendor/bin/phpcs --standard=PSR2 src tests"
         ],
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
