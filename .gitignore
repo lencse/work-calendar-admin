@@ -16,3 +16,9 @@
 /web/bundles/
 
 /.idea
+
+node_modules
+bower_components
+/dark-material/.sass-cache/
+/web/dist
+.temp

@@ -21,112 +21,112 @@ var onError = function (err) {
 };
 
 gulp.task('check-js-style', function () {
-    gulp.src('src/**/*.js')
+    gulp.src('dark-material/**/*.js')
         .pipe(jscs({fix: true}))
         .pipe(jscs.reporter())
         .pipe(jscs.reporter('fail'))
-        .pipe(gulp.dest('src'));
+        .pipe(gulp.dest('dark-material'));
 });
 
 gulp.task('serve', ['default', 'watch'], function () {
     var files = [
-        './dist/*.html',
-        './dist/css/**/*.css',
-        './dist/js/**/*.js'
+        './web/dist/*.html',
+        './web/dist/css/**/*.css',
+        './web/dist/js/**/*.js'
     ];
 
     browserSync.init(files, {
         server: {
-            baseDir: './dist'
+            baseDir: './web/dist'
         }
     });
 });
 
 gulp.task('scss', function () {
-    return gulp.src('./src/application.scss')
+    return gulp.src('./dark-material/application.scss')
         .pipe(plumber({errorHandler: onError}))
         .pipe(sass())
-        .pipe(gulp.dest('./dist/css'));
+        .pipe(gulp.dest('./web/dist/css'));
 });
 
 gulp.task('babel', ['scss'], function () {
-    return gulp.src('src/**/*.js')
+    return gulp.src('dark-material/**/*.js')
         .pipe(plumber({errorHandler: onError}))
         .pipe(babel())
-        .pipe(gulp.dest('./dist/js'));
+        .pipe(gulp.dest('./web/dist/js'));
 });
 
 gulp.task('watch', function () {
-    gulp.watch('./src/**/*.scss', ['default']);
-    gulp.watch('./src/**/*.js', ['default']);
-    gulp.watch('./src/**/*.html', ['default']);
+    gulp.watch('./dark-material/**/*.scss', ['default']);
+    gulp.watch('./dark-material/**/*.js', ['default']);
+    gulp.watch('./dark-material/**/*.html', ['default']);
 });
 
 gulp.task('jshint', ['babel', 'scss'], function () {
-    return gulp.src('src/**/*.js')
+    return gulp.src('dark-material/**/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter(stylish));
 });
 
 gulp.task('default', ['cleanDist', 'jshint', 'babel', 'copyJsLib', 'copyCssLib'], function () {
-    gulp.src('src/images/**/*')
-        .pipe(gulp.dest('dist/images'));
-    gulp.src('src/**/*.html')
-        .pipe(gulp.dest('dist/'))
-        .pipe(inject(gulp.src(['dist/js/**/*.js', 'dist/css/lib/*.css', 'dist/css/*.css'], {read: false}), {relative: true}))
-        .pipe(gulp.dest('dist/'));
+    gulp.src('dark-material/images/**/*')
+        .pipe(gulp.dest('web/dist/images'));
+    gulp.src('dark-material/**/*.html')
+        .pipe(gulp.dest('web/dist/'))
+        .pipe(inject(gulp.src(['web/dist/js/**/*.js', 'web/dist/css/lib/*.css', 'web/dist/css/*.css'], {read: false}), {relative: true}))
+        .pipe(gulp.dest('web/dist/'));
 });
 
 gulp.task('copyJsLib', ['cleanDist'], function () {
     return gulp.src(['bower_components/material-design-lite/material.js', 'bower_components/d3/d3.js',
         'bower_components/nvd3/build/nv.d3.js', 'bower_components/getmdl-select/getmdl-select.min.js'])
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('web/dist/js'));
 });
 
 gulp.task('copyMinJsLib', ['cleanDist'], function () {
     return gulp.src(['bower_components/material-design-lite/material.min.js', 'bower_components/d3/d3.min.js',
         'bower_components/nvd3/build/nv.d3.min.js', 'bower_components/getmdl-select/getmdl-select.min.js'])
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('web/dist/js'));
 });
 
 gulp.task('copyCssLib', ['cleanDist'], function () {
     return gulp.src(['bower_components/nvd3/build/nv.d3.css', 'bower_components/getmdl-select/getmdl-select.min.css'])
-        .pipe(gulp.dest('dist/css/lib'));
+        .pipe(gulp.dest('web/dist/css/lib'));
 });
 
 gulp.task('copyMinCssLib', ['cleanDist'], function () {
     return gulp.src(['bower_components/nvd3/build/nv.d3.min.css', 'bower_components/getmdl-select/getmdl-select.min.css'])
-        .pipe(gulp.dest('dist/css/lib'));
+        .pipe(gulp.dest('web/dist/css/lib'));
 });
 
 gulp.task('cleanDist', function () {
-    return del('dist/**/*');
+    return del('web/dist/**/*');
 });
 
 gulp.task('minifyJs', ['cleanDist'], function () {
-    return gulp.src('src/**/*.js')
+    return gulp.src('dark-material/**/*.js')
         .pipe(rename({suffix: '.min'}))
         .pipe(plumber({errorHandler: onError}))
         .pipe(babel())
         .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('web/dist/js'));
 });
 
 gulp.task('minifyCss', ['cleanDist'], function () {
-    return gulp.src('src/application.scss')
+    return gulp.src('dark-material/application.scss')
         .pipe(plumber({errorHandler: onError}))
         .pipe(sass())
         .pipe(minifycss())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('web/dist/css'));
 });
 
 gulp.task('build', ['minifyJs', 'minifyCss', 'copyMinCssLib', 'copyMinJsLib'], function () {
-    gulp.src('src/*.html')
-        .pipe(gulp.dest('dist/'))
-        .pipe(inject(gulp.src(['dist/js/**/*.js', 'dist/css/lib/*.css',
-            'dist/css/*.css'], {read: false}), {relative: true}))
-        .pipe(gulp.dest('dist/'));
-    gulp.src('src/images/**/*')
-        .pipe(gulp.dest('dist/images'));
+    gulp.src('dark-material/*.html')
+        .pipe(gulp.dest('web/dist/'))
+        .pipe(inject(gulp.src(['web/dist/js/**/*.js', 'web/dist/css/lib/*.css',
+            'web/dist/css/*.css'], {read: false}), {relative: true}))
+        .pipe(gulp.dest('web/dist/'));
+    gulp.src('dark-material/images/**/*')
+        .pipe(gulp.dest('web/dist/images'));
 });

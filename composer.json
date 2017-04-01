@@ -46,6 +46,9 @@
             "vendor/bin/phpmd src/ text phpmd.xml",
             "vendor/bin/phpcs --standard=PSR2 src tests"
         ],
+        "build": [
+            "gulp build"
+        ],
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",

@@ -5,5 +5,12 @@ before_script:
     - cp app/config/parameters.yml.travis app/config/parameters.yml
     - composer self-update
     - composer install --prefer-source --no-interaction
+    - npm install -g bower
+    - npm install -g gulp
+    - gem install sass
+    - gem install compass
+    - npm install
+    - bower install
+    - composer build
 script:
     - composer test-all

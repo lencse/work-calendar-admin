@@ -6,7 +6,7 @@
     "CreativeIT"
   ],
   "description": "Free dashboard template with Material Design Lite",
-  "main": "dist/index.html",
+  "main": "web/dist/index.html",
   "moduleType": [],
   "license": "MIT",
   "ignore": [
