@@ -39,10 +39,10 @@
     },
     "scripts": {
         "test": [
-            "vendor/bin/phpunit --configuration ./phpunit.xml.dist --no-coverage"
+            "vendor/bin/phpunit --configuration ./phpunit.xml.dist"
         ],
         "test-all": [
-            "vendor/bin/phpunit --configuration ./phpunit.xml.dist --no-coverage",
+            "vendor/bin/phpunit --configuration ./phpunit.xml.dist",
             "vendor/bin/phpmd src/ text phpmd.xml",
             "vendor/bin/phpcs --standard=PSR2 src tests"
         ],
