@@ -36,6 +36,12 @@
         "phpunit/phpunit": "^6.0"
     },
     "scripts": {
+        "test": [
+            "vendor/bin/phpunit --configuration ./phpunit.xml.dist --no-coverage"
+        ],
+        "test-all": [
+            "vendor/bin/phpunit --configuration ./phpunit.xml.dist --no-coverage"
+        ],
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
