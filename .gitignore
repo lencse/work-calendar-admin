@@ -20,5 +20,7 @@
 node_modules
 bower_components
 /dark-material/.sass-cache/
-/web/dist
+/web/images
+/web/css
+/web/js
 .temp

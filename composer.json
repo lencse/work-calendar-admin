@@ -48,6 +48,10 @@
         ],
         "build": [
             "gulp build",
+            "rm -rf web/js",
+            "rm -rf web/css",
+            "rm -rf web/images",
+            "mkdir web/js",
             "mv build/frontend/dark-material.js web/js/",
             "mv build/dark-material/css web/",
             "mv build/dark-material/images web/"
