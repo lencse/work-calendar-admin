@@ -1,6 +1,6 @@
 {
     "name": "lencse/admin",
-    "license": "proprietary",
+    "license": "MIT",
     "type": "project",
     "autoload": {
         "psr-4": {
