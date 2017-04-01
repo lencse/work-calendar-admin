@@ -47,7 +47,10 @@
             "vendor/bin/phpcs --standard=PSR2 src tests"
         ],
         "build": [
-            "gulp build"
+            "gulp build",
+            "mv build/frontend/dark-material.js web/js/",
+            "mv build/dark-material/css web/",
+            "mv build/dark-material/images web/"
         ],
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",

@@ -12,6 +12,6 @@ class DefaultControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/');
 
-        $this->assertContains('Your application is now ready', $client->getResponse()->getContent());
+        $this->assertContains('Luke', $client->getResponse()->getContent());
     }
 }
