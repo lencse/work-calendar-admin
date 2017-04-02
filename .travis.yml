@@ -3,15 +3,23 @@ php:
     - '7.1'
 env:
     - TRAVIS_NODE_VERSION="6.9.5"
-before_script:
-    - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
-    - node --version
-    - cp app/config/parameters.yml.travis app/config/parameters.yml
+before_install:
     - composer self-update
+    # Update nodejs
+    - rm -rf ~/.nvm
+    - git clone https://github.com/creationix/nvm.git ~/.nvm
+    - cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+    - source ~/.nvm/nvm.sh
+    - nvm install $TRAVIS_NODE_VERSION
+    - node --version
+    - npm --version
+    # Tools for building frontend
     - npm install -g bower
     - npm install -g gulp
     - gem install sass
     - gem install compass
+before_script:
+    - cp app/config/parameters.yml.travis app/config/parameters.yml
     - composer install --prefer-source --no-interaction
     - npm install
     - bower install
