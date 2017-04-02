@@ -12,7 +12,6 @@
     "Dark",
     "dark material design"
   ],
-  "main": "gulpfile.js",
   "licenses": [
     {
       "type": "MIT",
@@ -39,13 +38,15 @@
     "jshint-stylish": "2.0.1",
     "node-sass": "4.3.0",
     "typescript": "^2.2.2",
+    "@types/react": "^15.0.21",
     "webpack": "^2.3.2"
   },
   "scripts": {
     "build-typescript": "./node_modules/.bin/tsc -p ./frontend --outDir build/frontend",
     "build-webpack": "./node_modules/.bin/webpack",
     "scss": "scss stylesheets/main.scss web/css/main.css",
-    "build": "npm run build-typescript && npm run build-webpack && npm run scss",
+    "build-all": "npm run build-typescript && npm run build-webpack && npm run scss",
+    "build": "npm run build-typescript && npm run build-webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -58,7 +59,6 @@
   },
   "homepage": "https://github.com/CreativeIT/dashboard#readme",
   "dependencies": {
-    "@types/react": "^15.0.21",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   }
