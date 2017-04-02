@@ -1,9 +1,10 @@
 language: php
 php:
     - '7.1'
-node_js:
-    - 6.9
+env:
+    - TRAVIS_NODE_VERSION="6.9.5"
 before_script:
+    - rm -rf ~/.nvm && git clone https://github.com/creationix/nvm.git ~/.nvm && (cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`) && source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION
     - node --version
     - cp app/config/parameters.yml.travis app/config/parameters.yml
     - composer self-update
