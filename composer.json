@@ -52,9 +52,13 @@
             "rm -rf web/css",
             "rm -rf web/images",
             "mkdir web/js",
-            "mv build/frontend/dark-material.js web/js/",
-            "mv build/dark-material/css web/",
-            "mv build/dark-material/images web/"
+            "mv build/dark-material.js web/js/",
+            "mkdir web/css",
+            "mkdir web/css/lib",
+            "cp bower_components/nvd3/build/nv.d3.min.css web/css/lib/",
+            "cp bower_components/getmdl-select/getmdl-select.min.css web/css/lib/",
+            "mv build/dark-material/images web/",
+            "npm run build"
         ],
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",

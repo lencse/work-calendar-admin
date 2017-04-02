@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "module": "commonjs",
+        "target": "es5",
+        "removeComments": true,
+        "moduleResolution": "node",
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "experimentalDecorators": true,
+        "declaration": true
+    },
+    "exclude": [
+    ]
+}

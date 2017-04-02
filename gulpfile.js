@@ -122,21 +122,10 @@ gulp.task('minifyCss', ['cleanDist'], function () {
         .pipe(gulp.dest('build/dark-material/css'));
 });
 
-gulp.task('scripts', function() {
-    return gulp.src('./build/dark-material/js/*.js')
-        .pipe(concat('dark-material.js'))
-        .pipe(gulp.dest('./build/'));
-});
-
-gulp.task('build', ['minifyJs', 'minifyCss', 'copyMinCssLib', 'copyMinJsLib'], function () {
-    gulp.src('dark-material/*.html')
-        .pipe(gulp.dest('build/dark-material/'))
-        .pipe(inject(gulp.src(['build/dark-material/js/**/*.js', 'build/dark-material/css/lib/*.css',
-            'build/dark-material/css/*.css'], {read: false}), {relative: true}))
-        .pipe(gulp.dest('build/dark-material/'));
+gulp.task('build', ['minifyJs', 'copyMinJsLib'], function () {
     gulp.src('dark-material/images/**/*')
         .pipe(gulp.dest('build/dark-material/images'));
     gulp.src('./build/dark-material/js/**/*.js')
         .pipe(concat('dark-material.js'))
-        .pipe(gulp.dest('./build/frontend/'));
+        .pipe(gulp.dest('./build/'));
 });
