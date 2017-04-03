@@ -2,7 +2,7 @@ language: php
 php:
     - '7.1'
 env:
-    - TRAVIS_NODE_VERSION="6.9.5"
+    - TRAVIS_NODE_VERSION="6"
 before_install:
     - composer self-update
     # Update nodejs
