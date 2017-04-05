@@ -28,7 +28,7 @@ before_script:
     - cp app/config/parameters.yml.travis app/config/parameters.yml
     - composer install --prefer-source --no-interaction
     - yarn
-    - node_module/.bin/bower install
+    - node_modules/.bin/bower install
     - composer build
 script:
     - composer test-all
