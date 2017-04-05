@@ -47,7 +47,7 @@
             "vendor/bin/phpcs --standard=PSR2 src tests"
         ],
         "build": [
-            "gulp build",
+            "node_modules/.bin/gulp build",
             "rm -rf web/js",
             "rm -rf web/css",
             "rm -rf web/images",
@@ -58,7 +58,7 @@
             "cp bower_components/nvd3/build/nv.d3.min.css web/css/lib/",
             "cp bower_components/getmdl-select/getmdl-select.min.css web/css/lib/",
             "mv build/dark-material/images web/",
-            "npm run build"
+            "yarn build"
         ],
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
