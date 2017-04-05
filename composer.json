@@ -47,18 +47,15 @@
             "vendor/bin/phpcs --standard=PSR2 src tests"
         ],
         "build": [
-            "node_modules/.bin/gulp build",
             "rm -rf web/js",
             "rm -rf web/css",
             "rm -rf web/images",
             "mkdir web/js",
-            "mv build/dark-material.js web/js/",
+            "cp node_modules/lencse-getmdl-dashboard/build/dark-material.js web/js/",
             "mkdir web/css",
-            "mkdir web/css/lib",
-            "cp bower_components/nvd3/build/nv.d3.min.css web/css/lib/",
-            "cp bower_components/getmdl-select/getmdl-select.min.css web/css/lib/",
-            "mv build/dark-material/images web/",
-            "yarn build"
+            "cp node_modules/lencse-getmdl-dashboard/build/dark-material-vendor.css web/css/",
+            "cp -R node_modules/lencse-getmdl-dashboard/src/images web/",
+            "yarn build-all"
         ],
         "symfony-scripts": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
