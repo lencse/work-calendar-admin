@@ -1,46 +1,10 @@
 {
-  "name": "getmdl-dashboard",
+  "name": "work-calendar-admin",
   "version": "1.0.0",
-  "description": "Free dashboard template with Material Design Lite",
-  "keywords": [
-    "dashboard",
-    "admin template",
-    "mdl",
-    "getmdl",
-    "Material Design",
-    "Material Design Lite",
-    "Dark",
-    "dark material design"
-  ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://www.opensource.org/licenses/mit-license.php"
-    }
-  ],
-  "devDependencies": {
-    "@types/react": "^15.0.21",
-    "browser-sync": "2.18.6",
-    "del": "2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-babel": "5.3.0",
-    "gulp-clean": "0.3.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-inject": "3.0.0",
-    "gulp-jscs": "3.0.2",
-    "gulp-jshint": "1.12.0",
-    "gulp-livereload": "3.8.1",
-    "gulp-minify-css": "1.2.4",
-    "gulp-plumber": "1.0.2",
-    "gulp-rename": "1.2.2",
-    "gulp-sass": "2.1.1",
-    "gulp-uglify": "1.4.2",
-    "gulp-watch": "4.3.11",
-    "jshint-stylish": "2.0.1",
-    "node-sass": "4.3.0",
-    "typescript": "^2.2.2",
-    "webpack": "^2.3.2"
-  },
+  "main": "build/frontend/main.js",
+  "repository": "git@github.com:lencse/work-calendar-admin.git",
+  "author": "Levente Löki <leventeloki@gmail.com> (https://lokilevente.hu/)",
+  "license": "MIT",
   "scripts": {
     "build-typescript": "./node_modules/.bin/tsc -p ./frontend --outDir build/frontend",
     "build-webpack": "./node_modules/.bin/webpack",
@@ -49,20 +13,14 @@
     "build": "yarn run build-typescript && yarn run build-webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CreativeIT/getmdl-dashboard.git"
-  },
-  "author": "CreativeIT",
-  "bugs": {
-    "url": "https://github.com/CreativeIT/dashboard/issues"
-  },
-  "homepage": "https://github.com/CreativeIT/dashboard#readme",
   "dependencies": {
-    "bower": "^1.8.0",
-    "gulp-cli": "^1.2.2",
     "lencse-getmdl-dashboard": "^1.0.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "@types/react": "^15.0.21",
+    "typescript": "^2.2.2",
+    "webpack": "^2.3.3"
   }
 }
