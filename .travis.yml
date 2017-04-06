@@ -29,6 +29,6 @@ before_script:
     - cp app/config/parameters.yml.travis app/config/parameters.yml
     - composer install --prefer-source --no-interaction
     - yarn
-    - composer build
+    - yarn build-all
 script:
     - composer test-all

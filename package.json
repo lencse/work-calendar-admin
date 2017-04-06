@@ -9,7 +9,7 @@
     "build-typescript": "./node_modules/.bin/tsc -p ./frontend --outDir build/frontend",
     "build-webpack": "./node_modules/.bin/webpack",
     "scss": "scss stylesheets/main.scss web/css/main.css",
-    "build-all": "yarn run build-typescript && yarn run build-webpack && yarn run scss",
+    "build-all": "./install-mdl-assets.sh && yarn run build-typescript && yarn run build-webpack && yarn run scss",
     "build": "yarn run build-typescript && yarn run build-webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
