@@ -1,1 +1,32 @@
 @import '../node_modules/lencse-getmdl-dashboard/src/application';
+
+.login-form {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    .form-layout-middle {
+        display: table-cell;
+        vertical-align: middle;
+
+        .form-layout-inner {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 400px;
+            padding: $grid-phone-margin;
+
+            .mdl-card {
+                width: 100%;
+
+                .mdl-textfield {
+                    width: 100%;
+                }
+
+            }
+
+        }
+
+    }
+
+}

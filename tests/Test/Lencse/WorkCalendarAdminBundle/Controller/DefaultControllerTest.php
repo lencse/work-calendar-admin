@@ -12,6 +12,6 @@ class DefaultControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/');
 
-        $this->assertContains('Luke', $client->getResponse()->getContent());
+        $this->assertContains('react-main', $client->getResponse()->getContent());
     }
 }
