@@ -1,3 +1,8 @@
+lencse_work_calendar_db:
+    resource: "@LencseWorkCalendarDBBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 lencse_work_calendar_admin:
     resource: "@LencseWorkCalendarAdminBundle/Controller/"
     type:     annotation

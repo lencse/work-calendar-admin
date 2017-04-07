@@ -4,7 +4,8 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Lencse\\WorkCalendarAdminBundle\\": "src/Lencse/WorkCalendarAdminBundle"
+            "Lencse\\WorkCalendarAdminBundle\\": "src/Lencse/WorkCalendarAdminBundle",
+            "Lencse\\WorkCalendarDBBundle\\": "src/Lencse/WorkCalendarDBBundle"
         },
         "classmap": [
             "app/AppKernel.php",
@@ -13,7 +14,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Test\\Lencse\\WorkCalendarAdminBundle\\": "tests/Lencse/WorkCalendarAdminBundle"
+            "Test\\Lencse\\WorkCalendarAdminBundle\\": "tests/Lencse/WorkCalendarAdminBundle",
+            "Test\\Lencse\\WorkCalendarDBBundle\\": "tests/Lencse/WorkCalendarDBBundle"
         }
     },
     "require": {

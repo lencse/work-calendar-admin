@@ -1,0 +1,4 @@
+services:
+#    lencse_work_calendar_db.example:
+#        class: Lencse\WorkCalendarDBBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
