@@ -5,7 +5,8 @@
     "autoload": {
         "psr-4": {
             "Lencse\\WorkCalendarAdminBundle\\": "src/Lencse/WorkCalendarAdminBundle",
-            "Lencse\\WorkCalendarDBBundle\\": "src/Lencse/WorkCalendarDBBundle"
+            "Lencse\\WorkCalendarDBBundle\\": "src/Lencse/WorkCalendarDBBundle",
+            "Lencse\\UserBundle\\": "src/Lencse/UserBundle"
         },
         "classmap": [
             "app/AppKernel.php",
@@ -15,7 +16,8 @@
     "autoload-dev": {
         "psr-4": {
             "Test\\Lencse\\WorkCalendarAdminBundle\\": "tests/Lencse/WorkCalendarAdminBundle",
-            "Test\\Lencse\\WorkCalendarDBBundle\\": "tests/Lencse/WorkCalendarDBBundle"
+            "Test\\Lencse\\WorkCalendarDBBundle\\": "tests/Lencse/WorkCalendarDBBundle",
+            "Test\\Lencse\\UserBundle\\": "tests/Lencse/UserBundle"
         }
     },
     "require": {
@@ -30,7 +32,8 @@
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0",
-        "twig/twig": "^1.0||^2.0"
+        "twig/twig": "^1.0||^2.0",
+        "ramsey/uuid": "^3.6"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

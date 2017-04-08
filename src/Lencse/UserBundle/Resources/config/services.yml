@@ -1,0 +1,9 @@
+services:
+    lencse_user_factory:
+        class: "%lencse_user.user_factory.class%"
+    lencse_user_manager:
+        class: Lencse\UserBundle\Manager\UserManager
+        arguments:
+            - "@lencse_user_factory"
+            - "@security.password_encoder"
+            - "@doctrine.orm.entity_manager"

@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Lencse\WorkCalendarAdminBundle\LencseWorkCalendarAdminBundle(),
             new Lencse\WorkCalendarDBBundle\LencseWorkCalendarDBBundle(),
+            new Lencse\UserBundle\LencseUserBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
