@@ -16,7 +16,8 @@
   "dependencies": {
     "lencse-getmdl-dashboard": "^1.0.3",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
     "@types/react": "^15.0.21",
