@@ -14,9 +14,11 @@ class UserApiController extends Controller
     /**
      * @Route("/login")
      */
-    public function loginAction(Request $request)
+    public function loginAction()
     {
-        print_r($request->attributes); exit;
+        return $this->render('LencseWorkCalendarAdminBundle:UserApi:login.html.twig', array(
+            // ...
+        ));
     }
 
     /**
@@ -28,5 +30,4 @@ class UserApiController extends Controller
             // ...
         ));
     }
-
 }

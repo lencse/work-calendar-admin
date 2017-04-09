@@ -51,6 +51,7 @@ export default class LoginForm extends React.Component<{}, {}> {
                                         <button type="submit" className="mdl-button color-text--teal mdl-js-button mdl-js-ripple-effect pull-right">
                                             Bejelentkezés
                                         </button>
+                                        <div className="clearfix"></div>
                                     </div>
                                 </form>
                             </div>

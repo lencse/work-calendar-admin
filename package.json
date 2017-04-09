@@ -11,6 +11,7 @@
     "scss": "scss stylesheets/main.scss web/css/main.css",
     "build-all": "./install-mdl-assets.sh && yarn run build-typescript && yarn run build-webpack && yarn run scss",
     "build": "yarn run build-typescript && yarn run build-webpack",
+    "watch": "./node_modules/.bin/tsc -p ./frontend --outDir build/frontend --watch & ./node_modules/.bin/webpack --progress --colors --watch & scss --watch stylesheets/main.scss:web/css/main.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@types/react": "^15.0.21",
     "typescript": "^2.2.2",
-    "webpack": "^2.3.3"
+    "webpack": "^2.3.3",
+    "webpack-livereload-plugin": "^0.11.0"
   }
 }
