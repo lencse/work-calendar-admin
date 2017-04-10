@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d24b86dde1c3131998937c244593493d",
+    "content-hash": "b86b6ca7b6241e0a8e6d891a76fbd7b3",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -936,6 +936,91 @@
             "time": "2014-01-12T16:20:24+00:00"
         },
         {
+            "name": "lencse/date-utils",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lencse/date-utils.git",
+                "reference": "6e9000b0559b9c18664e03179e9a749ce5e413c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lencse/date-utils/zipball/6e9000b0559b9c18664e03179e9a749ce5e413c9",
+                "reference": "6e9000b0559b9c18664e03179e9a749ce5e413c9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "lencse/ci-tools": "^1.0",
+                "phpmd/phpmd": "^2.6",
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "^2.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lencse\\Date\\": "./src/Lencse/Date/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Levente Löki",
+                    "email": "leventeloki@gmail.com"
+                }
+            ],
+            "description": "Date util library",
+            "time": "2017-04-07T18:48:18+00:00"
+        },
+        {
+            "name": "lencse/work-calendar-core",
+            "version": "dev-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lencse/work-calendar-core.git",
+                "reference": "697a512a10374779d48f496d4a762724e9a06a9b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lencse/work-calendar-core/zipball/697a512a10374779d48f496d4a762724e9a06a9b",
+                "reference": "697a512a10374779d48f496d4a762724e9a06a9b",
+                "shasum": ""
+            },
+            "require": {
+                "lencse/date-utils": "^1.1",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "lencse/ci-tools": "^1.0",
+                "phpmd/phpmd": "^2.6",
+                "phpunit/phpunit": "5.*",
+                "squizlabs/php_codesniffer": "^2.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lencse\\WorkCalendar\\Day\\": "./src/Lencse/WorkCalendar/Day/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Levente Löki",
+                    "email": "leventeloki@gmail.com"
+                }
+            ],
+            "description": "Work calendar core library",
+            "time": "2017-04-09 12:17:34"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.22.1",
             "source": {
@@ -1012,6 +1097,61 @@
                 "psr-3"
             ],
             "time": "2017-03-13T07:08:03+00:00"
+        },
+        {
+            "name": "neomerx/json-api",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neomerx/json-api.git",
+                "reference": "84355a83fdca251f2734fb6173c654ecf6b5330d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/neomerx/json-api/zipball/84355a83fdca251f2734fb6173c654ecf6b5330d",
+                "reference": "84355a83fdca251f2734fb6173c654ecf6b5330d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "psr/http-message": "^1.0",
+                "psr/log": "^1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.4",
+                "monolog/monolog": "^1.18",
+                "phpmd/phpmd": "^2.6",
+                "phpunit/phpunit": "^4.6 || ^5.0 || ^6.0",
+                "scrutinizer/ocular": "^1.3",
+                "squizlabs/php_codesniffer": "^2.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Neomerx\\JsonApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "neomerx",
+                    "email": "info@neomerx.com"
+                }
+            ],
+            "description": "Framework agnostic JSON API (jsonapi.org) implementation",
+            "homepage": "https://github.com/neomerx/json-api",
+            "keywords": [
+                "JSON-API",
+                "api",
+                "json",
+                "jsonapi",
+                "jsonapi.org",
+                "neomerx"
+            ],
+            "time": "2017-02-17T09:03:53+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -1106,6 +1246,56 @@
                 "psr-6"
             ],
             "time": "2016-08-06T20:24:11+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "psr/log",
@@ -3672,7 +3862,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "lencse/work-calendar-core": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
