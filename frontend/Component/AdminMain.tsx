@@ -9,7 +9,13 @@ export default class AdminMain extends React.Component<{}, {}> {
 
     render () {
         return (
-            <LoginForm />
+            <div className="login-form mdl-layout__content">
+                <main className="mdl-layout__content">
+                    <div className="mdl-grid">
+                        <LoginForm />
+                    </div>
+                </main>
+            </div>
         );
     }
 

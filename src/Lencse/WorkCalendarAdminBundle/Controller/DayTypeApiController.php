@@ -4,10 +4,8 @@ namespace Lencse\WorkCalendarAdminBundle\Controller;
 
 use Lencse\WorkCalendar\Day\DayType;
 use Lencse\WorkCalendarAdminBundle\JsonApi\DayTypeSchema;
-use Neomerx\JsonApi\Document\Link;
 use Neomerx\JsonApi\Encoder\Encoder;
 use Neomerx\JsonApi\Encoder\EncoderOptions;
-use Neomerx\JsonApi\Encoder\Parameters\EncodingParameters;
 use Neomerx\JsonApi\Http\Headers\MediaType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
