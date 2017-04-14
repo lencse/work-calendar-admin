@@ -6,8 +6,8 @@ export default class LoginForm extends React.Component<{}, {}> {
         let username = usernameInput.value.trim();
         let password = passwordInput.value.trim();
         let body = new FormData();
-        body.append('username', username);
-        body.append('password', password);
+        body.append('_username', username);
+        body.append('_password', password);
         fetch('/login', {
             method: 'POST',
             body: body

@@ -21,14 +21,13 @@ security:
 
         main:
             anonymous: ~
-            # activate different ways to authenticate
+            form_login:
+                login_path: lencse_workcalendaradmin_user_login
+                check_path: lencse_workcalendaradmin_user_login
+            logout:
+                path: /logout
+                target: /
 
-            # http_basic: ~
-            # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
-
-            # form_login: ~
-            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
-
-#        api:
-#            pattern: ˆ/api/
-#            provider: lencse_wc_db_provider
+    access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: ROLE_USER }

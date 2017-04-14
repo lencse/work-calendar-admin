@@ -1,0 +1,59 @@
+{% extends '::base.html.twig' %}
+
+{% block content %}
+
+    <div class="login-form mdl-layout__content">
+        <main class="mdl-layout__content">
+            <div class="mdl-grid">
+                <div class="mdl-card mdl-shadow--2dp">
+                    <form action="{{ path('lencse_workcalendaradmin_user_login') }}" method="post">
+
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Work Calendar Admin</h2>
+                        </div>
+
+                        {% if error %}
+                            <div class="mdl-card__supporting-text mdl-color-text--orange">
+                                {{ error.message }}
+                            </div>
+                        {% endif %}
+
+                        <div class="mdl-card__supporting-text">
+                            <div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input
+                                        class="mdl-textfield__input"
+                                        type="text"
+                                        id="username"
+                                        name="_username"
+                                    />
+                                    <label class="mdl-textfield__label" for="username">Felhasználónév</label>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input
+                                        class="mdl-textfield__input"
+                                        type="password"
+                                        id="password"
+                                        name="_password"
+                                    />
+                                    <label class="mdl-textfield__label" htmlFor="username">Jelszó</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdl-card__actions mdl-card--border">
+                            <button type="submit" class="mdl-button color-text--teal mdl-js-button mdl-js-ripple-effect pull-right">
+                                Bejelentkezés
+                            </button>
+                            <div class="clearfix"></div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+{% endblock %}

@@ -4,16 +4,28 @@ namespace Lencse\WorkCalendarAdminBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Component\HttpFoundation\Request;
 
 class UserController extends Controller
 {
+
     /**
      * @Route("/login")
      */
-    public function loginAction(Request $request)
+    public function loginAction()
     {
-        print_r($_POST); exit;
+        $auth = $this->get('security.authentication_utils');
+        $error = $auth->getLastAuthenticationError();
+
+//        dump($this->get('translator')); exit;
+
+        return $this->render('@LencseWorkCalendarAdmin/login.html.twig', ['error' => $error]);
     }
 
+    /**
+     * @Route("/logout")
+     */
+    public function logout()
+    {
+
+    }
 }
