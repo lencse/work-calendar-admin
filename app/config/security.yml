@@ -22,8 +22,9 @@ security:
         main:
             anonymous: ~
             form_login:
-                login_path: lencse_workcalendaradmin_user_login
-                check_path: lencse_workcalendaradmin_user_login
+                login_path: lencse_workcalendaradmin_security_login
+                check_path: lencse_workcalendaradmin_security_login
+                csrf_token_generator: security.csrf.token_manager
             logout:
                 path: /logout
                 target: /

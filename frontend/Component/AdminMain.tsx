@@ -1,5 +1,5 @@
 import * as React from 'react';
-import LoginForm from './LoginForm';
+import HeaderContainer from './HeaderContainer';
 
 export default class AdminMain extends React.Component<{}, {}> {
 
@@ -9,10 +9,10 @@ export default class AdminMain extends React.Component<{}, {}> {
 
     render () {
         return (
-            <div className="login-form mdl-layout__content">
+            <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header is-small-screen">
+                <HeaderContainer />
                 <main className="mdl-layout__content">
                     <div className="mdl-grid">
-                        <LoginForm />
                     </div>
                 </main>
             </div>
