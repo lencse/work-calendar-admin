@@ -19,6 +19,8 @@ class UserSchema extends SchemaProvider
      * @param User $resource
      *
      * @return string
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function getId($resource): string
     {

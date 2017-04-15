@@ -16,6 +16,7 @@ use Symfony\Component\HttpFoundation\Response;
  */
 class UserApiController extends Controller
 {
+    
     /**
      * @Route("/me")
      */
@@ -30,5 +31,4 @@ class UserApiController extends Controller
             'Content-Type' => MediaType::JSON_API_MEDIA_TYPE
         ]);
     }
-
 }
