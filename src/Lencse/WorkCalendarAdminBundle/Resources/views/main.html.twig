@@ -3,3 +3,14 @@
 {% block content %}
     <div id="react-main"></div>
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="js/main.js"></script>
+
+    {% if app.debug %}
+        <script src="http://localhost:35729/livereload.js"></script>
+    {% endif %}
+
+{% endblock %}

@@ -2,13 +2,12 @@
     "compilerOptions": {
         "jsx": "react",
         "module": "commonjs",
-        "target": "es5",
+        "target": "es6",
         "removeComments": true,
         "moduleResolution": "node",
         "preserveConstEnums": true,
         "sourceMap": true,
-        "experimentalDecorators": true,
-        "declaration": true
+        "experimentalDecorators": true
     },
     "exclude": [
     ]
